@@ -1,0 +1,10 @@
+unmanaged implementation in class zbp_r_catch_wm_repl_sel unique;
+strict ( 2 );
+
+define behavior for ZR_CATCH_WM_REPL_SEL alias WatermeterReplacementSelection
+lock master
+authorization master ( global )
+{
+    action updateWaterMeters parameter ZR_CATCH_AI_UPDATE_WATERMETER;
+    action createDossiers parameter ZR_CATCH_AI_CREATE_DOSSIERS;
+}

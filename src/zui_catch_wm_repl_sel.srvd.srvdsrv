@@ -1,0 +1,24 @@
+@EndUserText.label: 'Catch-up: Watermeter replacement selection app'
+define service ZUI_CATCH_WM_REPL_SEL {
+  expose ZC_CATCH_WM_REPL_SEL as WatermeterReplacementSelection;
+  expose ZC_CATCH_WRS_JOB as WSRJob;
+  expose ZI_APPLICATION_LOG as ApplicationLog;
+  expose ZC_CATCH_WRS_NOTIFTYPE_VH as NotificationTypeValuehelp;
+  expose ZC_CATCH_WRS_PRIORITY_VH as NotificationPriorityValuehelp;
+  expose ZI_BillOfOperationsStdVH as BillOfOperationsValuehelp;
+  expose ZC_AdvReplYear_VH as AdvancedReplacementYearValuehe;
+  expose I_EquipmentStdVH as EquipmentValuehelp;
+  expose ZI_DigitalMeterID_VH as DigitalMeterValuehelp;
+  expose ZC_DigitalMtr_StatusFilterd_VH as DigitalMEterStatusValuehelp;
+  expose ZC_ConstructionYear_VH as ConstructionYearValuehelp;
+  expose ZC_MaterialNumber_VH as MaterialValuehelp;
+  expose ZC_Serialnr_VH as SerialNumberValuehelp;
+  expose ZC_StreetName_VH as StreetValuehelp;
+  expose ZC_postcode_VH as PostcodeValuehelp;
+  expose ZC_City_VH as CityValuehelp;
+  expose ZC_FunctionalLocation_VH as FunctionalLocationValuehelp;
+  expose ZC_MeterReadingUnit_VH as MeterReadingUnitValuehelp;
+  expose ZC_UtilitiesPortion_VH as UtilitiesPortionValuehelp;
+  expose ZC_SystStatus_VH as EquipmentSystemStatusValuehelp;
+  expose ZC_Notification_YF_ZV_Types_VH as NotificationValuehelp;
+}

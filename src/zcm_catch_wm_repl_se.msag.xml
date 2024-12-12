@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+    <MASTERLANG>N</MASTERLANG>
+    <STEXT>Watermetere replacement selection equipment</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Start creatie dossier voor equipment &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Log handle = &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Start creatie order..</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Gecreerd order id: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Start creatie melding..</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Gecreerde melding id: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Stop creatie dossier voor equipment &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Fout update van log handle in job name &amp;1 en job count &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Verplichte parameter - &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Start validatie inputs..</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Validatie inputs gefaald</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Validatie inputs succes</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Er bestaat reeds een melding &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Er bestaat reeds een order &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Update watermeter gefaald</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Meldingsoort &amp;1 - RoutingGroup &amp;2 - GroupCounter &amp;3 - Prioriteit &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Geen melding gevonden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Geen order gevonden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>N</SPRSL>
+     <ARBGB>ZCM_CATCH_WM_REPL_SE</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Er is reeds een creatie dossiers verwerking actief voor equipment &amp;1</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

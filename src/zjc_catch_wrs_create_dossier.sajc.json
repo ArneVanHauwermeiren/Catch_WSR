@@ -1,0 +1,9 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "WRS create dossier",
+    "originalLanguage": "nl",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "className": "ZCL_CATCH_WM_REPL_SEL_JOB"
+}

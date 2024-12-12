@@ -1,0 +1,8 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_CATCH_WM_REPL_SEL //alias <alias_name>
+{
+  use action updateWaterMeters;
+  use action createDossiers;
+}

@@ -1,0 +1,5 @@
+CLASS zbp_r_catch_wrs_job DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_catch_wrs_job.
+ENDCLASS.
+
+CLASS zbp_r_catch_wrs_job IMPLEMENTATION.
+ENDCLASS.

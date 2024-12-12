@@ -1,0 +1,13 @@
+@Metadata.layer: #CUSTOMER
+annotate view ZC_CATCH_WRS_JOB
+    with 
+{
+    @UI: { lineItem: [{ position: 10 }],
+           identification: [{ position: 10}] }
+    Uuid;
+    
+    @UI: { lineItem: [{ position: 10 }],
+           identification: [{ position: 10}] }
+    Equipment;
+    
+}

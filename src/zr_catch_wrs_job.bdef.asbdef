@@ -1,0 +1,44 @@
+managed implementation in class zbp_r_catch_wrs_job unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_CATCH_WRS_JOB alias WRSJob
+draft table ZCATCH_WRS_JOB_D
+with unmanaged save
+authorization master (global)
+lock master
+total etag LastChangedAt
+etag master LocalLastChangedAt
+{
+  field (readonly, numbering : managed ) Uuid;
+  field (readonly) LastChangedAt, LastChangedBy, LocalLastChangedAt, CreatedAt, CreatedBy;
+  field (mandatory) Equipment;
+
+  create;
+  update;
+  delete;
+
+  validation checkEquipmentUnique on save { create; }
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare{ }
+
+  mapping for zcatch_wrs_job corresponding {
+    ScheduleJob = schedule_job;
+    Equipment = equipment;
+    JobStartTimestamp = job_start_timestamp;
+    JobCount = job_count;
+    JobName = job_name;
+    LogHandle = log_handle;
+    Uuid = uuid;
+    CreatedAt = created_at;
+    CreatedBy = created_by;
+    LastChangedAt = last_changed_at;
+    LastChangedBy = last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+}

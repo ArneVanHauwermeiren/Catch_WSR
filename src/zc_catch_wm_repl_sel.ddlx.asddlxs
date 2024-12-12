@@ -1,0 +1,223 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'Digitale watermeter',
+                  typeNamePlural: 'Digitale watermeters',
+                  title: { type: #STANDARD, value:'DigitalMeterID' } }
+
+@UI.presentationVariant: [ { sortOrder: [ { by: 'DigitalMeterID', direction: #DESC } ],
+                             visualizations: [ { type: #AS_LINEITEM } ] } ]
+
+annotate view ZC_CATCH_WM_REPL_SEL with
+
+{
+  @UI.facet: [ { label    : 'Algemene informatie',
+                 id       : 'Facet_0',
+                 purpose  : #STANDARD,
+                 type     : #COLLECTION,
+                 position : 20  },
+               { id       : 'FieldGroup_0',
+                 purpose  : #STANDARD,
+                 parentId : 'Facet_0',
+                 type     : #FIELDGROUP_REFERENCE,
+                 targetQualifier: 'FieldGroup_0',
+                 position : 20   },
+               
+               { label    : 'Applicatie job',
+                 id       : 'Facet_1',
+                 purpose  : #STANDARD,
+                 type     : #COLLECTION,
+                 position : 20  },
+               { id       : 'FieldGroup_1',
+                 purpose  : #STANDARD,
+                 parentId : 'Facet_1',
+                 type     : #FIELDGROUP_REFERENCE,
+                 targetQualifier: 'FieldGroup_1',
+                 position : 20   },
+                 
+               { label    : 'Applicatie log',
+                 id       : 'Facet_2',
+                 purpose  : #STANDARD,
+                 type     : #COLLECTION,
+                 position : 20  },
+               { id: 'idApplicationLogItem',
+                 type: #LINEITEM_REFERENCE,
+                 position: 20,
+                 targetElement: '_ApplicationLog',
+                 parentId: 'Facet_2' } ]
+                 
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_EquipmentStdVH', element: 'Equipment' } } ]
+  @EndUserText.label: 'Equipment'
+  @UI.lineItem: [ { position: 50, importance: #MEDIUM },
+                  { type: #FOR_ACTION,
+                    dataAction: 'updateWaterMeters',
+                    label: 'Watermeters aanpassen',
+                    position: 50,
+                    importance: #MEDIUM,
+                    invocationGrouping: #CHANGE_SET },
+                  { type: #FOR_ACTION,
+                    dataAction: 'createDossiers',
+                    label: 'Dossiers Creëren',
+                    position: 50,
+                    importance: #MEDIUM,
+                    invocationGrouping: #CHANGE_SET } ]
+  @UI.selectionField: [ { position: 120 } ]
+  @UI.fieldGroup: [ { qualifier: 'FieldGroup_0', position: 21, label: 'Equipment' } ]
+  Equipment;
+
+  @EndUserText.label: 'Functieplaats omschrijving'
+  @UI.lineItem: [ { position: 20 } ]
+  FunctionalLocationDesc;
+
+  @EndUserText.label: 'Aanvulling op apparaatlocatie'
+  @UI.lineItem: [ { position: 30 } ]
+  DeviceLocationAddition;
+
+  @EndUserText.label: 'Apparaat omschrijving'
+  @UI.lineItem: [ { position: 40 } ]
+  DeviceDescription;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZI_DigitalMeterID_VH', element: 'Meterid' } } ]
+  @EndUserText.label: 'Digitale watermeter'
+  @UI.lineItem: [ { position: 10 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  DigitalMeterID;
+
+  @Consumption.filter.mandatory: true
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_DigitalMtr_StatusFilterd_VH', element: 'StatusId' } } ]
+  @EndUserText.label: 'Digitale watermeter status'
+  @UI.lineItem: [ { position: 60 } ]
+  @UI.selectionField: [ { position: 50 } ]
+  DigitalMeterStatus;
+
+  @EndUserText.label: 'Digitale watermeter status omschrijving'
+  @UI.lineItem: [ { position: 70 } ]
+  DigitalMeterStatusDesc;
+
+  @EndUserText.label: 'Aansluitobject'
+  @UI.lineItem: [ { position: 80 } ]
+  ConnectionObject;
+
+  @EndUserText.label: 'Equipment omschrijving'
+  @UI.lineItem: [ { position: 90 } ]
+  EquipmentDescription;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_ConstructionYear_VH', element: 'ConstructionYear' } } ]
+  @EndUserText.label: 'Bouwjaar'
+  @UI.lineItem: [ { position: 100 } ]
+  @UI.selectionField: [ { position: 70 } ]
+  ConstructionYear;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_MaterialNumber_VH', element: 'MaterialNumber' } } ]
+  @EndUserText.label: 'Materiaal'
+  @UI.lineItem: [ { position: 110 } ]
+  @UI.selectionField: [ { position: 90 } ]
+  MaterialNumber;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_Serialnr_VH', element: 'SerialNumber' } } ]
+  @EndUserText.label: 'Serienummer'
+  @UI.lineItem: [ { position: 120 } ]
+  @UI.selectionField: [ { position: 60 } ]
+  SerialNumber;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_StreetName_VH', element: 'StreetName' } } ]
+  @EndUserText.label: 'Straat'
+  @UI.lineItem: [ { position: 130 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Street;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_postcode_VH', element: 'PostCode' } } ]
+  @EndUserText.label: 'Postcode'
+  @UI.lineItem: [ { position: 140 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  PostalCode;
+
+  @EndUserText.label: 'Wijk'
+  @UI.lineItem: [ { position: 150 } ]
+  District;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_City_VH', element: 'City' } } ]
+  @EndUserText.label: 'Plaats'
+  @UI.lineItem: [ { position: 160 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  City;
+
+  @EndUserText.label: 'Huisnummer'
+  @UI.lineItem: [ { position: 170 } ]
+  HouseNumber;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_FunctionalLocation_VH', element: 'FunctionalLocation' } } ]
+  @EndUserText.label: 'Functieplaats'
+  @UI.lineItem: [ { position: 180 } ]
+  @UI.selectionField: [ { position: 130 } ]
+  FunctionalLocation;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_AdvReplYear_VH', element: 'UtilsDeviceAdvncRplcmtYear' } } ]
+  @EndUserText.label: 'Vervroegd vervangingsjaar'
+  @UI.lineItem: [ { position: 185 } ]
+  @UI.selectionField: [ { position: 80 } ]
+  AdvancedReplacementYear;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_MeterReadingUnit_VH', element: 'MeterReadingUnit' } } ]
+  @EndUserText.label: 'Opname eenheid'
+  @UI.lineItem: [ { position: 190 } ]
+  @UI.selectionField: [ { position: 100 } ]
+  MeterReadingUnit;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_UtilitiesPortion_VH', element: 'UtilitiesPortion' } } ]
+  @EndUserText.label: 'Portie'
+  @UI.lineItem: [ { position: 200 } ]
+  @UI.selectionField: [ { position: 110 } ]
+  Portion;
+
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZC_SystStatus_VH', element:    'SystemStatusShortName' } }]
+  @UI: { lineItem: [ { position: 210 } ], selectionField: [{ position: 140 }]
+  //  , identification: [{ position: 140 }]
+  }
+  @EndUserText.label: 'Equipment systeem status'
+  SystemStatus;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZC_Notification_YF_ZV_Types_VH', element: 'Notification' } } ]
+  @EndUserText.label: 'Melding'
+  @UI.lineItem: [ { position: 220 } ]
+  @UI.selectionField: [ { position: 150 } ]
+  Notification;
+
+  @EndUserText.label: 'Meldingssoort'
+  @UI.lineItem: [ { position: 230 } ]
+  NotificationType;
+
+  @EndUserText.label: 'Prioriteit'
+  @UI.lineItem: [ { position: 240 } ]
+  Priority;
+
+  @EndUserText.label: 'Order'
+  @UI.lineItem: [ { position: 250 } ]
+  OrderID;
+
+  @UI.hidden: true
+  ScheduleJob;
+  
+  @UI.hidden: true
+  LogHandle;
+  
+  @UI.fieldGroup: [ { qualifier: 'FieldGroup_1', position: 21, label: 'Start op' } ]
+  @UI.lineItem: [ { position: 9, label: 'Start creatie dossiers' } ]
+  JobStartTimestamp;
+  
+  @UI.fieldGroup: [ { qualifier: 'FieldGroup_1', position: 30, label: 'Applicatie job naam' } ]
+  @EndUserText.label: 'Creatie dossiers applicatie job naam'
+  JobName;
+  
+  @UI.hidden: true
+  JobCount;
+
+  @UI.hidden: true
+  JobStatus;
+
+  @UI.hidden: true
+  JobStatusCriticality;
+
+  @UI.fieldGroup: [ { qualifier: 'FieldGroup_1', position: 20, criticality: 'JobStatusCriticality', label: 'Status' } ]
+  @UI.lineItem: [ { position: 1, criticality: 'JobStatusCriticality', label: 'Status creatie dossiers' } ]
+  JobStatusText;
+}
